@@ -1,0 +1,6 @@
+CONSTRUIR EL CONTENEDOR {USERNAME = usuario de Docker: 'jmdcdvs'}
+docker build -f Dockerfile.dev -t USERNAME:frontend .
+docker build -f Dockerfile.dev -t jmdcdvs:frontend .
+
+EMPEZAR EL CONTENEDOR {USERNAME = usuario de Docker: 'jmdcdvs'; YOURUSERNAME = usuario de la distribución de linux (Ubuntu): 'jmdc'}
+docker run -it -p 3000:3000 -v /home/node/app/node_modules -v /home/jmdc/frontend:/home/node/app jmdcdvs:frontend
